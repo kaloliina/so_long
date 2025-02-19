@@ -6,7 +6,7 @@
 /*   By: khiidenh <khiidenh@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 18:07:53 by khiidenh          #+#    #+#             */
-/*   Updated: 2025/02/12 18:51:31 by khiidenh         ###   ########.fr       */
+/*   Updated: 2025/02/19 13:20:37 by khiidenh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ static void	check_progress(t_game *game)
 		while (i < game->images[COLLECTABLE]->count)
 		{
 			if (game->images[COLLECTABLE]->instances[i].x
-				== (int)game->player.x * TILE
+				== game->player.x * TILE
 				&& game->images[COLLECTABLE]->instances[i].y
-				== (int)game->player.y * TILE)
+				== game->player.y * TILE)
 			{
 				game->images[COLLECTABLE]->instances[i].enabled = false;
 			}

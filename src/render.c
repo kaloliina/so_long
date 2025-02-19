@@ -6,14 +6,13 @@
 /*   By: khiidenh <khiidenh@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 16:46:14 by khiidenh          #+#    #+#             */
-/*   Updated: 2025/02/13 14:56:34 by khiidenh         ###   ########.fr       */
+/*   Updated: 2025/02/19 13:15:54 by khiidenh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-//mby get rid of size_t
-static void	draw_asset(t_game *game, enum e_assets type, size_t x, size_t y)
+static void	draw_asset(t_game *game, enum e_assets type, int x, int y)
 {
 	if (mlx_image_to_window(game->mlx, game->images[BASE],
 			x * TILE, y * TILE) < 0)
@@ -44,8 +43,8 @@ static void	draw_asset(t_game *game, enum e_assets type, size_t x, size_t y)
 
 static void	render_map(t_game *game)
 {
-	size_t	x;
-	size_t	y;
+	int	x;
+	int	y;
 
 	y = 0;
 	while (game->height > y)

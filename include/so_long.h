@@ -6,7 +6,7 @@
 /*   By: khiidenh <khiidenh@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 12:48:44 by khiidenh          #+#    #+#             */
-/*   Updated: 2025/02/12 19:06:50 by khiidenh         ###   ########.fr       */
+/*   Updated: 2025/02/19 13:14:19 by khiidenh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 # include "../MLX42/include/MLX42/MLX42.h"
 # include "../libft/includes/libft.h"
 # include <stdlib.h>
-# include <stdio.h>
 # include <unistd.h>
 # include <string.h>
 # include <fcntl.h>
@@ -59,10 +58,10 @@ enum e_assets
 
 typedef struct s_player
 {
-	size_t	x;
-	size_t	y;
-	int		collected;
-	int		movements;
+	int	x;
+	int	y;
+	int	collected;
+	int	movements;
 }	t_player;
 
 typedef struct s_game
@@ -70,8 +69,8 @@ typedef struct s_game
 	mlx_t		*mlx;
 	int			collectables;
 	char		**map;
-	size_t		width;
-	size_t		height;
+	int			width;
+	int			height;
 	t_player	player;
 	mlx_image_t	*images[7];
 }	t_game;

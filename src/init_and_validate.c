@@ -6,7 +6,7 @@
 /*   By: khiidenh <khiidenh@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 13:00:59 by khiidenh          #+#    #+#             */
-/*   Updated: 2025/02/13 16:51:54 by khiidenh         ###   ########.fr       */
+/*   Updated: 2025/02/19 13:24:49 by khiidenh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static void	flood_fill(t_game *game, t_map_validation *validation)
 	tab = malloc(sizeof(char *) * (game->height + 1));
 	if (tab == NULL)
 		cleanup_and_exit(game, ERRGEN, 0);
-	while (y < (int)game->height)
+	while (y < game->height)
 	{
 		tab[y] = ft_strdup(game->map[y]);
 		if (tab[y] == NULL)
